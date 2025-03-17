@@ -1,11 +1,11 @@
-package com.jmp.template;
+package com.jmp.orderservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TemplateMicroserviceApplication {
+public class OrderMicroserviceApplication {
     public static void main(String[] args) {
-        SpringApplication.run(TemplateMicroserviceApplication.class, args);
+        SpringApplication.run(OrderMicroserviceApplication.class, args);
     }
 }
