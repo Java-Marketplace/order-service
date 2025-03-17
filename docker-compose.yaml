@@ -1,7 +1,7 @@
 services:
   postgresql:
     image: postgres:latest
-    container_name: template-microservice_database
+    container_name: order-microservice_database
     env_file:
       - .env
     environment:

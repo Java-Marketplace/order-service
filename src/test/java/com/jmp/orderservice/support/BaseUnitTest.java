@@ -1,4 +1,4 @@
-package com.jmp.template.support;
+package com.jmp.orderservice.support;
 
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.extension.ExtendWith;
