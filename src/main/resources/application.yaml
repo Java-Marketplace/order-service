@@ -22,3 +22,7 @@ spring:
 
   liquibase:
     enabled: false
+    change-log: classpath:/db/changelog/db.changelog-master.xml
+  flyway:
+    baseline-on-migrate: true
+    baseline-version: 0
