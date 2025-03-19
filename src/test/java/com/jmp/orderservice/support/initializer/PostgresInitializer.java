@@ -1,4 +1,4 @@
-package com.jmp.template.support.initializer;
+package com.jmp.orderservice.support.initializer;
 
 import org.jetbrains.annotations.NotNull;
 import org.springframework.context.ApplicationContextInitializer;

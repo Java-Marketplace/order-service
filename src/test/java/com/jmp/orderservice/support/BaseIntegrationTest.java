@@ -1,8 +1,8 @@
-package com.jmp.template.support;
+package com.jmp.orderservice.support;
 
 import com.github.database.rider.core.api.configuration.DBUnit;
 import com.github.database.rider.spring.api.DBRider;
-import com.jmp.template.support.initializer.PostgresInitializer;
+import com.jmp.orderservice.support.initializer.PostgresInitializer;
 import org.junit.jupiter.api.Tag;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.autoconfigure.web.reactive.AutoConfigureWebTestClient;
