@@ -49,8 +49,6 @@ dependencies {
     testImplementation("org.testcontainers:postgresql")
     testImplementation("com.github.database-rider:rider-spring:${property("database-rider.version")}")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
-    implementation("org.flywaydb:flyway-database-postgresql:10.12.0")
-    implementation("org.flywaydb:flyway-core")
 }
 
 tasks.withType<Test> {
