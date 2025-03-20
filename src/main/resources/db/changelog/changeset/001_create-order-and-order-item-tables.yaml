@@ -1,6 +1,6 @@
 databaseChangeLog:
   - changeSet:
-      id: 1742377672266-1
+      id: 1742488708610-1
       author: bogna (generated)
       objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
       changes:
@@ -10,7 +10,52 @@ databaseChangeLog:
                   constraints:
                     nullable: false
                     primaryKey: true
-                    primaryKeyName: pk_order
+                    primaryKeyName: pk_order_item
+                  name: id
+                  type: UUID
+              - column:
+                  constraints:
+                    nullable: false
+                  name: product_id
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: quantity
+                  type: INT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: price
+                  type: DECIMAL
+              - column:
+                  constraints:
+                    nullable: false
+                  name: created_at
+                  type: DATETIME
+              - column:
+                  constraints:
+                    nullable: false
+                  name: updated_at
+                  type: DATETIME
+              - column:
+                  constraints:
+                    nullable: false
+                  name: order_id
+                  type: UUID
+            tableName: order_item
+  - changeSet:
+      id: 1742488708610-2
+      author: bogna (generated)
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_orders
                   name: id
                   type: UUID
               - column:
@@ -53,54 +98,9 @@ databaseChangeLog:
                     nullable: false
                   name: updated_at
                   type: DATETIME
-            tableName: order
+            tableName: orders
   - changeSet:
-      id: 1742377672266-2
-      author: bogna (generated)
-      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
-      changes:
-        - createTable:
-            columns:
-              - column:
-                  constraints:
-                    nullable: false
-                    primaryKey: true
-                    primaryKeyName: pk_order_item
-                  name: id
-                  type: UUID
-              - column:
-                  constraints:
-                    nullable: false
-                  name: order_id
-                  type: UUID
-              - column:
-                  constraints:
-                    nullable: false
-                  name: product_id
-                  type: BIGINT
-              - column:
-                  constraints:
-                    nullable: false
-                  name: quantity
-                  type: INT
-              - column:
-                  constraints:
-                    nullable: false
-                  name: price
-                  type: DECIMAL
-              - column:
-                  constraints:
-                    nullable: false
-                  name: created_at
-                  type: DATETIME
-              - column:
-                  constraints:
-                    nullable: false
-                  name: updated_at
-                  type: DATETIME
-            tableName: order_item
-  - changeSet:
-      id: 1742377672266-3
+      id: 1742488708610-3
       author: bogna (generated)
       objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
       changes:
@@ -109,5 +109,5 @@ databaseChangeLog:
             baseTableName: order_item
             constraintName: FK_ORDER_ITEM_ON_ORDER
             referencedColumnNames: id
-            referencedTableName: order
+            referencedTableName: orders
 
