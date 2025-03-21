@@ -23,7 +23,7 @@ import java.util.UUID;
 @Entity(name = "order_item")
 public class OrderItem {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
     @Column(nullable = false)
