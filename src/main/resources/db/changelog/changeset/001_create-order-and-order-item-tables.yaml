@@ -1,7 +1,7 @@
 databaseChangeLog:
   - changeSet:
-      id: 1742492839279-1
-      author: bogna (generated)
+      id: 1742494166998-1
+      author: aqua (generated)
       objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
       changes:
         - createTable:
@@ -38,32 +38,15 @@ databaseChangeLog:
                     nullable: false
                   name: updated_at
                   type: DATETIME
-            tableName: order_item
-  - changeSet:
-      id: 1742492839279-2
-      author: bogna (generated)
-      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
-      changes:
-        - createTable:
-            columns:
               - column:
                   constraints:
                     nullable: false
-                    primaryKey: true
-                    primaryKeyName: pk_order_order_items
                   name: order_id
                   type: UUID
-              - column:
-                  constraints:
-                    nullable: false
-                    primaryKey: true
-                    primaryKeyName: pk_order_order_items
-                  name: order_item_id
-                  type: UUID
-            tableName: order_order_items
+            tableName: order_item
   - changeSet:
-      id: 1742492839279-3
-      author: bogna (generated)
+      id: 1742494166998-2
+      author: aqua (generated)
       objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
       changes:
         - createTable:
@@ -117,34 +100,14 @@ databaseChangeLog:
                   type: DATETIME
             tableName: orders
   - changeSet:
-      id: 1742492839279-4
-      author: bogna (generated)
-      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
-      changes:
-        - addUniqueConstraint:
-            columnNames: order_item_id
-            constraintName: uc_order_order_items_order_item
-            tableName: order_order_items
-  - changeSet:
-      id: 1742492839279-5
-      author: bogna (generated)
+      id: 1742494166998-3
+      author: aqua (generated)
       objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
       changes:
         - addForeignKeyConstraint:
             baseColumnNames: order_id
-            baseTableName: order_order_items
-            constraintName: fk_ordordite_on_order
+            baseTableName: order_item
+            constraintName: FK_ORDER_ITEM_ON_ORDER
             referencedColumnNames: id
             referencedTableName: orders
-  - changeSet:
-      id: 1742492839279-6
-      author: bogna (generated)
-      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
-      changes:
-        - addForeignKeyConstraint:
-            baseColumnNames: order_item_id
-            baseTableName: order_order_items
-            constraintName: fk_ordordite_on_order_item
-            referencedColumnNames: id
-            referencedTableName: order_item
 
